@@ -37,7 +37,7 @@ A comprehensive web application that helps Muslims calculate their zakat easily 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/zakat-calculator.git
+   git clone https://github.com/MauCariApa-com/zakat-calculator.git
    cd zakat-calculator
    ```
 
