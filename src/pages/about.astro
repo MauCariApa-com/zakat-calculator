@@ -1,0 +1,299 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Zakat Calculator" description="Learn more about the Zakat Calculator application, its purpose, and developers.">
+  <!-- Hero Section -->
+  <section class="py-20 bg-gradient-to-r from-islamic-green to-islamic-green-dark text-white">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto">
+        <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+          <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          About Zakat Calculator
+        </h1>
+        <p class="text-xl text-islamic-cream max-w-3xl mx-auto leading-relaxed">
+          An application that helps Muslims calculate their zakat easily, accurately, and according to Islamic law.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4">
+      <nav class="flex items-center space-x-2 text-sm">
+        <a href="/" class="text-islamic-green hover:text-islamic-green-dark transition-colors">Home</a>
+        <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span class="text-gray-600">About</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Mission Statement -->
+        <section class="mb-16">
+          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
+            <div class="text-center mb-12">
+              <div class="w-16 h-16 bg-islamic-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-islamic-green mb-6">Our Mission</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                To make it easier for Muslims to calculate zakat accurately and according to Islamic law 
+                through modern technology that is easily accessible.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-islamic-green bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-islamic-green" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-islamic-green mb-2">Accurate</h3>
+                <p class="text-gray-600 text-sm">Calculations according to Islamic law</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-islamic-green bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-islamic-green" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-islamic-green mb-2">Trusted</h3>
+                <p class="text-gray-600 text-sm">Based on Quran and authentic hadiths</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-12 h-12 bg-islamic-green bg-opacity-10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-islamic-green" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-islamic-green mb-2">Safe</h3>
+                <p class="text-gray-600 text-sm">Personal data not stored on servers</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="mb-16">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-islamic-green mb-6">Key Features</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete application with various features to help calculate your zakat
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-12 h-12 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Gold Zakat</h3>
+              <p class="text-gray-600 text-sm">Calculate gold zakat with nisab of 85 grams</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-12 h-12 bg-gradient-to-r from-gray-400 to-slate-500 rounded-xl flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Silver Zakat</h3>
+              <p class="text-gray-600 text-sm">Calculate silver zakat with nisab of 595 grams</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-12 h-12 bg-gradient-to-r from-emerald-400 to-green-500 rounded-xl flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Wealth Zakat</h3>
+              <p class="text-gray-600 text-sm">Calculate wealth and savings zakat</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Income Zakat</h3>
+              <p class="text-gray-600 text-sm">Calculate salary and income zakat</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Technology Stack -->
+        <section class="mb-16">
+          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100">
+            <div class="text-center mb-12">
+              <div class="w-16 h-16 bg-islamic-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                </svg>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-islamic-green mb-6">Modern Technology</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built with cutting-edge web technology for optimal performance and the best user experience
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <span class="text-white font-bold text-lg">A</span>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-sm">Astro</h3>
+                <p class="text-gray-600 text-xs">Modern Framework</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <span class="text-white font-bold text-lg">T</span>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-sm">Tailwind CSS</h3>
+                <p class="text-gray-600 text-xs">Utility-First CSS</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <span class="text-white font-bold text-lg">TS</span>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-sm">TypeScript</h3>
+                <p class="text-gray-600 text-xs">Type Safety</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <span class="text-white font-bold text-lg">H5</span>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-sm">HTML5</h3>
+                <p class="text-gray-600 text-xs">Semantic Web</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                  <span class="text-white font-bold text-lg">C3</span>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-sm">CSS3</h3>
+                <p class="text-gray-600 text-xs">Modern Styling</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- References -->
+        <section class="mb-16">
+          <div class="bg-gradient-to-r from-islamic-cream to-white rounded-2xl shadow-lg p-8 md:p-12 border border-islamic-gold">
+            <div class="text-center mb-12">
+              <div class="w-16 h-16 bg-islamic-green rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-islamic-green mb-6">Reference Sources</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Zakat calculations based on trusted and widely recognized sources
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-islamic-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-islamic-green">Quran and Authentic Hadiths</h3>
+                    <p class="text-gray-600 text-sm">Primary sources of Islamic law</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-islamic-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-islamic-green">Recognized Fiqh Books</h3>
+                    <p class="text-gray-600 text-sm">References from trusted scholars</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-islamic-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-islamic-green">Official Institution Fatwas</h3>
+                    <p class="text-gray-600 text-sm">Guidance from recognized institutions</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start space-x-3">
+                  <div class="w-8 h-8 bg-islamic-green rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-islamic-green">Islamic Scholars</h3>
+                    <p class="text-gray-600 text-sm">Contemporary Islamic scholarship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section>
+          <div class="bg-gradient-to-r from-islamic-green to-islamic-green-dark rounded-2xl p-8 md:p-12 text-white text-center">
+            <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Calculate Zakat?</h2>
+            <p class="text-xl text-islamic-cream mb-8 max-w-2xl mx-auto leading-relaxed">
+              Use our zakat calculator to find out your zakat obligations easily and accurately
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/#calculator" class="bg-white text-islamic-green hover:bg-islamic-cream font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Calculate Zakat Now
+              </a>
+              <a href="/contact" class="border-2 border-white text-white hover:bg-white hover:text-islamic-green font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</Layout>

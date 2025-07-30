@@ -1,0 +1,31 @@
+{
+  "title": "Gold Zakat",
+  "nisab": 85,
+  "nisabUnit": "grams",
+  "kadarZakat": 2.5,
+  "kadarZakatUnit": "percent",
+  "description": "Gold zakat is obligatory when the gold owned reaches the nisab of 85 grams and has been owned for one full year (haul).",
+  "calculation": "Zakat = (Gold Weight - Nisab) × Gold Price per Gram × 2.5%",
+  "conditions": [
+    "Gold reaches the minimum nisab of 85 grams",
+    "Has been owned for one full year (haul)",
+    "It is stored gold, not jewelry worn daily"
+  ],
+  "formInputs": [
+    {
+      "id": "goldWeight",
+      "label": "Gold Weight (grams)",
+      "type": "number",
+      "placeholder": "Enter gold weight in grams",
+      "required": true
+    },
+    {
+      "id": "goldPrice",
+      "label": "Gold Price per Gram ($)",
+      "type": "number",
+      "placeholder": "Enter gold price per gram",
+      "required": true
+    }
+  ],
+  "dalilIds": ["gold-evidence-1", "gold-evidence-2"]
+}

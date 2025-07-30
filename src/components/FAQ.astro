@@ -1,0 +1,228 @@
+---
+const faqData = [
+  {
+    id: 1,
+    question: "Is this Zakat Calculator application free?",
+    answer: "Yes, the Zakat Calculator application is completely free and open source. We provide this service to help Muslims fulfill their zakat obligations easily and accurately."
+  },
+  {
+    id: 2,
+    question: "How accurate are the zakat calculations in this application?",
+    answer: "The zakat calculations in this application are based on Islamic law that has been consulted with scholars and refer to the Quran, authentic hadiths, and guidelines from recognized Islamic institutions."
+  },
+  {
+    id: 3,
+    question: "Is my personal data safe when using this application?",
+    answer: "Yes, your data is very safe. All calculations are done locally in your browser and no data is sent or stored on our servers. Your privacy is our top priority."
+  },
+  {
+    id: 4,
+    question: "What types of zakat can be calculated in this application?",
+    answer: "This application supports calculation of 4 main types of zakat: Gold Zakat (nisab 85 grams), Silver Zakat (nisab 595 grams), Wealth Zakat (money, savings, investments), and Income Zakat (monthly salary)."
+  },
+  {
+    id: 5,
+    question: "How do I change zakat data such as gold prices and nisab?",
+    answer: "Zakat data such as nisab and calculation formulas are stored in JSON files in the src/content/zakat/ folder. To change current gold prices, you need to enter them manually in the calculator form. If you want to change nisab or formulas, edit the gold.json, silver.json, wealth.json, or income.json files as needed. After changes, the application will automatically use the new data."
+  },
+  {
+    id: 6,
+    question: "How do I find out the current gold price for nisab calculation?",
+    answer: "You need to enter the current gold price per gram which can be obtained from gold shops, official websites, or financial applications. Make sure to use accurate prices for correct calculations. Gold prices change daily, so always use the latest prices."
+  },
+  {
+    id: 7,
+    question: "Where are the zakat configuration data files located?",
+    answer: "Zakat configuration data files are located in the src/content/zakat/ folder with the structure: gold.json (gold zakat data), silver.json (silver zakat data), wealth.json (wealth zakat data), and income.json (income zakat data). Each file contains nisab, zakat rate, conditions, and required form inputs."
+  },
+  {
+    id: 8,
+    question: "Can I contribute to the development of this application?",
+    answer: "Absolutely! We accept various forms of contributions such as code improvements, translations, documentation, or improvement suggestions. Please visit our GitHub repository or contact us directly."
+  },
+  {
+    id: 9,
+    question: "What is meant by haul in zakat?",
+    answer: "Haul is the requirement of owning wealth for one full year (12 Hijri months) before being obligated to pay zakat. This applies to gold, silver, and wealth zakat. Income zakat does not require haul."
+  },
+  {
+    id: 10,
+    question: "What if my wealth is exactly at the nisab limit?",
+    answer: "If your wealth exactly reaches the nisab or more, then you are obligated to pay zakat of 2.5%. If it's less than the nisab, then zakat is not yet obligatory but you are still encouraged to give charity."
+  }
+];
+---
+
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-islamic-green rounded-full mb-6">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-islamic-green mb-6">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Find answers to common questions about zakat and using the zakat calculator application
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="space-y-4">
+        {faqData.map((faq, index) => (
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+            <button 
+              class="faq-toggle w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-islamic-green focus:ring-opacity-50 rounded-2xl"
+              data-faq-id={faq.id}
+            >
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-gray-800 pr-4">
+                  {faq.question}
+                </h3>
+                <div class="flex-shrink-0">
+                  <svg class="faq-icon w-6 h-6 text-islamic-green transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="faq-content hidden px-6 pb-6">
+              <div class="pt-2 border-t border-gray-100">
+                <p class="text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Technical Info Card -->
+      <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
+        <div class="flex items-center mb-6">
+          <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-blue-800">Zakat Data File Structure</h3>
+            <p class="text-blue-600">Technical information for developers and contributors</p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <h4 class="font-semibold text-blue-800 mb-3">File Locations</h4>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-center">
+                <code class="bg-gray-100 px-2 py-1 rounded text-xs mr-2">src/content/zakat/</code>
+                <span class="text-gray-600">Main folder</span>
+              </div>
+              <div class="flex items-center">
+                <code class="bg-gray-100 px-2 py-1 rounded text-xs mr-2">gold.json</code>
+                <span class="text-gray-600">Gold zakat data</span>
+              </div>
+              <div class="flex items-center">
+                <code class="bg-gray-100 px-2 py-1 rounded text-xs mr-2">silver.json</code>
+                <span class="text-gray-600">Silver zakat data</span>
+              </div>
+              <div class="flex items-center">
+                <code class="bg-gray-100 px-2 py-1 rounded text-xs mr-2">wealth.json</code>
+                <span class="text-gray-600">Wealth zakat data</span>
+              </div>
+              <div class="flex items-center">
+                <code class="bg-gray-100 px-2 py-1 rounded text-xs mr-2">income.json</code>
+                <span class="text-gray-600">Income zakat data</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg p-4 border border-blue-200">
+            <h4 class="font-semibold text-blue-800 mb-3">Data Structure</h4>
+            <div class="space-y-2 text-sm text-gray-600">
+              <div>• <strong>title:</strong> Zakat type name</div>
+              <div>• <strong>nisab:</strong> Minimum nisab value</div>
+              <div>• <strong>zakatRate:</strong> Zakat percentage (2.5%)</div>
+              <div>• <strong>conditions:</strong> Zakat obligations</div>
+              <div>• <strong>formInputs:</strong> Calculator input fields</div>
+              <div>• <strong>calculation:</strong> Calculation formula</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <div class="flex items-start">
+            <svg class="w-5 h-5 text-yellow-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <h5 class="font-semibold text-yellow-800 mb-1">Important Note</h5>
+              <p class="text-yellow-700 text-sm">
+                After changing JSON files, the application will automatically use the new data. 
+                Make sure the JSON format remains valid and consult nisab changes with competent scholars.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-12 text-center">
+        <div class="bg-gradient-to-r from-islamic-green to-islamic-green-dark rounded-2xl p-8 text-white">
+          <h3 class="text-2xl font-bold mb-4">Still Have Questions?</h3>
+          <p class="text-islamic-cream mb-6 max-w-2xl mx-auto">
+            If you have other questions that are not answered above, don't hesitate to contact us. 
+            Our team is ready to help you.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" class="bg-white text-islamic-green hover:bg-islamic-cream font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+              Contact Us
+            </a>
+            <a href="https://github.com/username/zakat-calculator" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="border-2 border-white text-white hover:bg-white hover:text-islamic-green font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const faqId = this.dataset.faqId;
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.faq-icon');
+        
+        // Close all other FAQ items
+        faqToggles.forEach(otherToggle => {
+          if (otherToggle !== this) {
+            const otherContent = otherToggle.nextElementSibling;
+            const otherIcon = otherToggle.querySelector('.faq-icon');
+            otherContent.classList.add('hidden');
+            otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current FAQ item
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  });
+</script>

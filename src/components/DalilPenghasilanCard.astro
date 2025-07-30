@@ -1,0 +1,41 @@
+---
+// Import evidence data for income
+const evidenceData = await Promise.all([
+  import('../content/dalil/dalil-penghasilan-1.json').then(m => m.default),
+  import('../content/dalil/dalil-penghasilan-2.json').then(m => m.default)
+]);
+---
+
+<div class="mt-12">
+  <div class="flex items-center mb-6">
+    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+      <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <h4 class="text-xl font-semibold text-blue-700">Islamic Evidence for Income Zakat</h4>
+  </div>
+  <div class="space-y-6">
+    {evidenceData.map(evidence => (
+      <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-300 shadow-sm">
+        <div class="flex items-center mb-4">
+          <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h5 class="font-semibold text-blue-700">
+            {evidence.type === 'quran' ? 'Quran' : 'Hadith'}
+          </h5>
+        </div>
+        <div class="bg-white rounded-lg p-4 mb-4 border border-blue-200">
+          <div class="arabic-text text-blue-700 font-medium">{evidence.text}</div>
+        </div>
+        <p class="text-gray-700 italic mb-3 leading-relaxed">"{evidence.translation}"</p>
+        <span class="inline-block bg-blue-500 bg-opacity-20 text-blue-700 font-medium px-3 py-1 rounded-full text-sm">
+          {evidence.source}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>

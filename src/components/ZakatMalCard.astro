@@ -1,0 +1,121 @@
+---
+const zakatData = await import('../content/zakat/mal.json').then(m => m.default);
+---
+
+<div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-1 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+  <div class="bg-white rounded-xl p-8 h-full border border-emerald-200">
+    <div class="flex items-center mb-6">
+      <div class="w-12 h-12 bg-gradient-to-r from-emerald-400 to-green-500 rounded-xl flex items-center justify-center mr-4">
+        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-gray-800">{zakatData.title}</h3>
+        <p class="text-emerald-600 font-medium">Assets & Savings • {zakatData.kadarZakat}%</p>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <p class="text-gray-600 mb-6 leading-relaxed">{zakatData.description}</p>
+    
+    <!-- Info Section -->
+    <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-6 mb-6 border border-emerald-200">
+      <div class="flex items-center mb-4">
+        <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center mr-3">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-emerald-800">Important Information</h4>
+      </div>
+      <div class="text-sm text-emerald-700">
+        <p><strong>Nisab:</strong> Equivalent to {zakatData.nisab} {zakatData.nisabUnit}</p>
+        <p><strong>Formula:</strong> {zakatData.calculation}</p>
+      </div>
+    </div>
+
+    <!-- Conditions -->
+    <div class="bg-teal-50 rounded-xl p-6 mb-6 border border-teal-200">
+      <div class="flex items-center mb-4">
+        <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center mr-3">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-teal-800">Zakat Obligations</h4>
+      </div>
+      <ul class="space-y-2">
+        {zakatData.conditions.map(condition => (
+          <li class="flex items-start">
+            <svg class="w-4 h-4 text-teal-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-teal-700 text-sm">{condition}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Calculator Form -->
+    <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 mb-8">
+      <div class="flex items-center mb-6">
+        <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center mr-3">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h4 class="font-semibold text-gray-800">{zakatData.title} Calculator</h4>
+      </div>
+
+      <form class="zakat-form space-y-6" data-zakat-type="wealth-zakat">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {zakatData.formInputs.map(input => (
+            <div class="space-y-2">
+              <label for={input.id} class="block text-sm font-medium text-gray-700">
+                {input.label}
+                {input.required && <span class="text-red-500 ml-1">*</span>}
+              </label>
+              <input
+                type={input.type}
+                id={input.id}
+                name={input.id}
+                placeholder={input.placeholder}
+                required={input.required}
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 hover:border-gray-400"
+                min="0"
+                step="0.01"
+              />
+            </div>
+          ))}
+        </div>
+        
+        <button type="submit" class="w-full bg-gradient-to-r from-emerald-400 to-green-500 hover:from-emerald-500 hover:to-green-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <div class="flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Calculate Wealth Zakat
+          </div>
+        </button>
+      </form>
+    </div>
+
+    <!-- Results Section -->
+    <div class="zakat-result hidden" id="result-wealth-zakat">
+      <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 border border-green-200">
+        <div class="flex items-center mb-4">
+          <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h4 class="font-semibold text-green-800">Wealth Zakat Calculation Result</h4>
+        </div>
+        <div class="result-content">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

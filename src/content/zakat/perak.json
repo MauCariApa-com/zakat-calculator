@@ -1,0 +1,31 @@
+{
+  "title": "Silver Zakat",
+  "nisab": 595,
+  "nisabUnit": "grams",
+  "kadarZakat": 2.5,
+  "kadarZakatUnit": "percent",
+  "description": "Silver zakat is obligatory when the silver owned reaches the nisab of 595 grams and has been owned for one full year (haul).",
+  "calculation": "Zakat = (Silver Weight - Nisab) × Silver Price per Gram × 2.5%",
+  "conditions": [
+    "Silver reaches the minimum nisab of 595 grams",
+    "Has been owned for one full year (haul)",
+    "It is stored silver or investment silver"
+  ],
+  "formInputs": [
+    {
+      "id": "silverWeight",
+      "label": "Silver Weight (grams)",
+      "type": "number",
+      "placeholder": "Enter silver weight in grams",
+      "required": true
+    },
+    {
+      "id": "silverPrice",
+      "label": "Silver Price per Gram ($)",
+      "type": "number",
+      "placeholder": "Enter silver price per gram",
+      "required": true
+    }
+  ],
+  "dalilIds": ["silver-evidence-1"]
+}

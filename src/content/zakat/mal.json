@@ -1,0 +1,52 @@
+{
+  "title": "Wealth Zakat",
+  "nisab": 85,
+  "nisabUnit": "grams of gold",
+  "kadarZakat": 2.5,
+  "kadarZakatUnit": "percent",
+  "description": "Wealth zakat is zakat paid on wealth such as cash, savings, deposits, and investments that have reached the nisab and haul.",
+  "calculation": "Zakat = Total Wealth × 2.5%",
+  "conditions": [
+    "Total wealth reaches the nisab (equivalent to 85 grams of gold)",
+    "Has been owned for one full year (haul)",
+    "The wealth is not for basic necessities"
+  ],
+  "formInputs": [
+    {
+      "id": "cash",
+      "label": "Cash ($)",
+      "type": "number",
+      "placeholder": "Enter cash amount",
+      "required": false
+    },
+    {
+      "id": "savings",
+      "label": "Savings ($)",
+      "type": "number",
+      "placeholder": "Enter savings amount",
+      "required": false
+    },
+    {
+      "id": "deposits",
+      "label": "Deposits ($)",
+      "type": "number",
+      "placeholder": "Enter deposit amount",
+      "required": false
+    },
+    {
+      "id": "investments",
+      "label": "Other Investments ($)",
+      "type": "number",
+      "placeholder": "Enter other investment value",
+      "required": false
+    },
+    {
+      "id": "goldPriceNisab",
+      "label": "Gold Price per Gram for Nisab ($)",
+      "type": "number",
+      "placeholder": "Enter gold price per gram",
+      "required": true
+    }
+  ],
+  "dalilIds": ["wealth-evidence-1", "wealth-evidence-2"]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Income Zakat",
+  "nisab": 85,
+  "nisabUnit": "grams of gold per month",
+  "kadarZakat": 2.5,
+  "kadarZakatUnit": "percent",
+  "description": "Income zakat is zakat paid on monthly income such as salary, honorarium, or other lawful income.",
+  "calculation": "Zakat = Net Income × 2.5% (if it reaches nisab)",
+  "conditions": [
+    "Monthly income reaches the nisab (equivalent to 85 grams of gold)",
+    "The income is lawful and clean",
+    "Paid monthly when receiving income"
+  ],
+  "formInputs": [
+    {
+      "id": "basicSalary",
+      "label": "Basic Salary ($)",
+      "type": "number",
+      "placeholder": "Enter monthly basic salary",
+      "required": false
+    },
+    {
+      "id": "allowances",
+      "label": "Allowances ($)",
+      "type": "number",
+      "placeholder": "Enter total allowances",
+      "required": false
+    },
+    {
+      "id": "bonuses",
+      "label": "Bonuses/Incentives ($)",
+      "type": "number",
+      "placeholder": "Enter bonuses or incentives",
+      "required": false
+    },
+    {
+      "id": "otherIncome",
+      "label": "Other Income ($)",
+      "type": "number",
+      "placeholder": "Enter other lawful income",
+      "required": false
+    },
+    {
+      "id": "goldPriceNisab",
+      "label": "Gold Price per Gram for Nisab ($)",
+      "type": "number",
+      "placeholder": "Enter gold price per gram",
+      "required": true
+    }
+  ],
+  "dalilIds": ["income-evidence-1", "income-evidence-2"]
+}
