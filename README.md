@@ -353,7 +353,7 @@ We welcome contributions from developers, Islamic scholars, and community member
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/your-username/zakat-calculator.git
+   git clone hhttps://github.com/MauCariApa-com/zakat-calculator.git
    ```
 
 2. **Create feature branch**
